@@ -1,0 +1,92 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2; /* gris claro */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* blanco */
+    box-shadow: 0 4px 6px rgba(50, 50, 50, .1);
+}
+
+h1 {
+    text-align: center;
+    color: #5083c2; /* verde claro */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+
+p {
+    line-height: 1.5;
+    color: #333333; /* negro */
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #3cabb3; /* verde claro */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #EBF8E9; /* blanco con tono verde */
+    box-shadow: 0 4px 6px rgba(50, 50, 50, .1);
+}
+
+a:hover {
+    color: #5083c2; /* verde oscuro */
+}
+
+button {
+    background-color: #5083c2; /* verde claro */
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para figuras y decoraciones en azul */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.blue-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #0074D9; /* azul oscuro */
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.blue-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to right, rgba(0, 116, 213, 1), rgba(0, 116, 213, 0));
+    animation-name: wave;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* Estilos para la figura de onda azul */
+@keyframes wave {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-20px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}

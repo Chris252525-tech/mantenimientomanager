@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sobre nosotros</h1>
+        <p>Somos estuadiantes de la Universidad Tecnologíca del Suroeste de Guanajuato, estudiamos la carrera de desarrollo de software donde aprendemos y ponemos en práctica nuevos conocimientos, gracias a la carrera, logramos construir esta aplicación web, espero sea de su agrado</p>
+        <p>El objetivo de nuestra aplicación es implementar un sistema de gestión que permite llevar un control adecuado y registrar de forma virtual todo el material de herramientas prestadas y utilizadas dento del area de mantenimiento de nuestra universidad.</p>
+        <button onclick="location.href='inicio.html'">Volver a Inicio</button>
+        <h5>¿Tienes comentarios para nosotros? Envianos un correo y con gusto lo leeremos</h5>
+        <button onclick="sendEmail()">Enviar correo</button>
+        
+
+    <!-- Script JavaScript para enviar correo electrónico -->
+    <script>
+        function sendEmail() {
+          // Crear objeto de correo electrónico
+          var email = new Object();
+          email.subject = "Prueba de correo desde mi aplicación";
+          email.body = "Este es un mensaje de prueba enviado desde mi aplicación.";
+
+          // Verificar si el navegador admite la función para enviar correos electrónicos
+          if (window.navigator && window.navigator.mimeTypes && window.navigator.mimeTypes["message/rfc822"]) {
+            // Construir enlace HTML
+            var link = document.createElement("a");
+            link.href = "mailto:";
+            link.target = "_blank";
+
+            // Agregar parámetros de correo electrónico como atributos al enlace
+            link.setAttribute("href", "mailto:?subject=" + encodeURIComponent(email.subject) + "&body=" + encodeURIComponent(email.body));
+            link.innerHTML = "Enviar correo"; // Para mostrar un texto alternativo si el navegador no admite la función de enviar correos electrónicos
+
+            // Insertar el enlace en el documento
+            document.body.appendChild(link);
+            link.click(); // Simular el clic en el enlace para abrir la ventana emergente de correo electrónico
+
+          } else {
+            alert("Esta aplicación no admite la funcionalidad de enviar correos electrónicos.");
+          }
+        }
+         
+    </script>
+    </div>
+</body>
+</html>
